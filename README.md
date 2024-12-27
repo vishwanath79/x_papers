@@ -17,10 +17,26 @@ A web application that fetches and summarizes recent research papers from Huggin
 ## Setup
 
 1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/xpapers.git
+cd xpapers
+```
 
-## Environment Variables
+2. Install the dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-- `OPENAI_API_KEY`: Your OpenAI API key (required)
+3. Set up environment variables:
+```bash
+# Create a .env file and add your OpenAI API key
+echo "OPENAI_API_KEY=your_api_key_here" > .env
+```
+
+4. Run the application:
+```bash
+python webapp.py
+```
 
 ## License
 
