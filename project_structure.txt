@@ -1,0 +1,8 @@
+ai-research-summarizer/
+├── ai_model.py            # OpenAI integration
+├── researcher.py          # Paper fetching and processing
+├── webapp.py             # Main web application
+├── css_styles.py         # Web application styling
+├── .env                  # Environment variables
+├── .gitignore           # Git ignore rules
+└── README.md            # Project documentation 
