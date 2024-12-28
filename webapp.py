@@ -1,9 +1,10 @@
 import gradio as gr
 import css_styles
-from researcher import extract_paper_titles, get_yesterday_date
+from researcher import extract_paper_titles
 from storage import PaperStorage
 import time
 import os
+from gradio import Interface
 
 # Initialize paper storage
 paper_storage = PaperStorage()
@@ -12,7 +13,9 @@ def get_papers_list():
     """
     Fetch and format papers for display
     """
-    url = f"https://huggingface.co/papers?date={get_yesterday_date()}"
+    # Use paper_storage's get_yesterday_date method
+    yesterday = paper_storage.get_yesterday_date()
+    url = f"https://huggingface.co/papers?date={yesterday}"
     new_papers = extract_paper_titles(url)
     
     # Add new papers to storage
@@ -32,7 +35,7 @@ def get_papers_list():
                 <a href='{paper['url']}' class='title' target='_blank'>{paper['title']}</a>
                 <div class='summary'>{paper.get('summary', '')}</div>
                 <div class='meta'>
-                    <span class='time'>{get_yesterday_date()}</span> • 
+                    <span class='time'>{yesterday}</span> • 
                     <a href='{paper['url']}' class='view-link' target='_blank'>Read Paper</a>
                 </div>
             </div>
@@ -61,7 +64,7 @@ def get_papers_list():
         html_content += f"""
             <tr>
                 <td>{paper['title']}</td>
-                <td>{get_yesterday_date()}</td>
+                <td>{yesterday}</td>
                 <td><a href='{paper['url']}' target='_blank'>View Paper</a></td>
             </tr>
         """
@@ -113,14 +116,12 @@ def create_app():
 
     return app
 
+
+
 if __name__ == "__main__":
-    app = create_app()
-    # Get port from environment variable with fallback to 8080
-    port = int(os.environ.get("PORT", 8080))
-    
-    # Launch with specific port and host settings for Cloud Run
-    app.launch(
-        server_name="0.0.0.0",  # Listen on all available interfaces
-        server_port=port,       # Use the PORT from environment variable
-        share=True             # Optional: for sharing public URL
-    ) 
+    port = int(os.getenv("PORT", 8080))
+    demo = create_app()
+    demo.launch(server_name="0.0.0.0", 
+               server_port=port,
+               show_error=True,
+               share=True) 

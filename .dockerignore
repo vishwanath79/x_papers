@@ -17,6 +17,5 @@ venv/
 .idea/
 
 # Misc
-README.md
-*.md
-*.log 
+*.log
+tests/ 

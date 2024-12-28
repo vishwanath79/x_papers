@@ -3,6 +3,8 @@ ai-research-summarizer/
 ├── researcher.py          # Paper fetching and processing
 ├── webapp.py             # Main web application
 ├── css_styles.py         # Web application styling
-├── .env                  # Environment variables
-├── .gitignore           # Git ignore rules
-└── README.md            # Project documentation 
+├── Dockerfile            # Container configuration
+├── requirements.txt      # Python dependencies
+├── .dockerignore         # Docker ignore rules
+├── .env                  # Environment variables (not included in container)
+└── README.md            # Documentation 

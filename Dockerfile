@@ -19,7 +19,7 @@ ENV PORT=8080
 # Expose port
 EXPOSE ${PORT}
 
-# Command to run the application
-CMD python3 webapp.py  # Use exec to ensure proper signal handling 
+# Command to run the application (using exec form)
+CMD ["python3", "-u", "webapp.py"]
 
 

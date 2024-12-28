@@ -3,6 +3,8 @@ from datetime import datetime, timezone, timedelta
 from bs4 import BeautifulSoup
 import re
 from ai_model import generate_text
+from storage import PaperStorage
+
 def clean_title(title):
     """Clean and format paper title"""
     # Remove extra whitespace and newlines
@@ -109,13 +111,6 @@ def generate_paper_summary(paper_title, paper_url):
     """Generate a summary of a paper"""
     prompt = f"Generate a summary of the following paper using its title and restrict to 200 charactors or less{paper_title} - {paper_url}"
     return generate_text(prompt)
-
-
-def get_yesterday_date():
-    """Get yesterday's date in YYYY-MM-DD format"""
-    today = datetime.now()
-    yesterday = today - timedelta(days=1)
-    return yesterday.strftime('%Y-%m-%d')
 
 def main():
     """
