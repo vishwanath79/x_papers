@@ -7,7 +7,8 @@ class PaperStorage:
     def add_paper(self, paper):
         # Add date_added using local get_yesterday_date function
         paper['date_added'] = self.get_yesterday_date()
-        if paper not in self.papers:
+        # Check if paper with same URL already exists
+        if not any(p['url'] == paper['url'] for p in self.papers):
             self.papers.append(paper)
 
     def get_all_papers(self):
