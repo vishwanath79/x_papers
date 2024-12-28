@@ -23,6 +23,3 @@ EXPOSE ${PORT}
 CMD python3 webapp.py  # Use exec to ensure proper signal handling 
 
 
-gcloud run services update xpapers \
-  --region us-central1 \
-  --force-async
