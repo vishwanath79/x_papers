@@ -20,4 +20,4 @@ ENV PORT=8080
 EXPOSE 8080
 
 # Command to run the application
-CMD ["python", "webapp.py"] 
+CMD ["python3", "webapp.py"] 
