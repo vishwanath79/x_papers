@@ -3,6 +3,7 @@ import css_styles
 from researcher import extract_paper_titles, get_yesterday_date
 from storage import PaperStorage
 import time
+import os
 
 # Initialize paper storage
 paper_storage = PaperStorage()
@@ -114,4 +115,12 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.launch(share=True) 
+    # Get port from environment variable with fallback to 8080
+    port = int(os.environ.get("PORT", 8080))
+    
+    # Launch with specific port and host settings for Cloud Run
+    app.launch(
+        server_name="0.0.0.0",  # Listen on all available interfaces
+        server_port=port,       # Use the PORT from environment variable
+        share=True             # Optional: for sharing public URL
+    ) 
