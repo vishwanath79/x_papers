@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Token-Budget-Aware LLM Reasoning",
+    "url": "https://huggingface.co/papers/2412.18547"
+  },
+  {
+    "title": "Mulberry: Empowering MLLM with o1-like Reasoning and Reflection via Collective Monte Carlo Tree Search",
+    "url": "https://huggingface.co/papers/2412.18319"
+  },
+  {
+    "title": "WavePulse: Real-time Content Analytics of Radio Livestreams",
+    "url": "https://huggingface.co/papers/2412.17998"
+  },
+  {
+    "title": "How \"Real\" is Your Real-Time Simultaneous Speech-to-Text Translation System?",
+    "url": "https://huggingface.co/papers/2412.18495"
+  },
+  {
+    "title": "Video-Panda: Parameter-efficient Alignment for Encoder-free Video-Language Models",
+    "url": "https://huggingface.co/papers/2412.18609"
+  },
+  {
+    "title": "VidTwin: Video VAE with Decoupled Structure and Dynamics",
+    "url": "https://huggingface.co/papers/2412.17726"
+  },
+  {
+    "title": "PepTune: De Novo Generation of Therapeutic Peptides with Multi-Objective-Guided Discrete Diffusion",
+    "url": "https://huggingface.co/papers/2412.17780"
+  }
+]

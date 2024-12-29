@@ -8,7 +8,7 @@ dist/
 build/
 *.egg-info/
 *.egg
-*.json
+
 # Virtual environments
 venv/
 env/
@@ -43,3 +43,9 @@ pip-delete-this-directory.txt
 
 # Documentation
 docs/_build/
+
+# Gradio specific
+.gradio/
+.gradio/*
+.gradio/certificate.pem
+*.pem
