@@ -62,3 +62,22 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+## Testing
+
+To run the tests:
+
+1. Install development dependencies:
+```bash
+pip install -r requirements-dev.txt
+```
+
+2. Run the tests:
+```bash
+python -m pytest tests/
+```
+
+For coverage report:
+```bash
+python -m pytest --cov=. tests/
+```
+

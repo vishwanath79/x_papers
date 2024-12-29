@@ -7,4 +7,9 @@ ai-research-summarizer/
 ├── requirements.txt      # Python dependencies
 ├── .dockerignore         # Docker ignore rules
 ├── .env                  # Environment variables (not included in container)
-└── README.md            # Documentation 
+├── README.md            # Documentation 
+├── tests/
+│   ├── __init__.py
+│   ├── test_ai_model.py
+│   ├── test_researcher.py
+│   └── test_storage.py 
